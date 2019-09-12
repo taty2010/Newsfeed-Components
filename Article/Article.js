@@ -115,9 +115,9 @@ const data = [
    article.appendChild(p3);
    article.appendChild(bttn);
 
-   article.classLists.add('articles');
-   date.classLists.add('date');
-   bttn.classLists.add('expandButton')
+   article.classList.add('articles');
+   date.classList.add('date');
+   bttn.classList.add('expandButton')
 
    title.textContent = ar.title;
    date.textContent = ar.date;
@@ -125,7 +125,7 @@ const data = [
    p2.textContent = ar.secondParagraph;
    p3.textContent = ar.thirdParagraph;
 
-   return createArticle;
+   return article;
 
  }
 
@@ -146,6 +146,6 @@ const data = [
 
 const container = document.querySelector('.articles');
 
-data.forEach((data)=>{
-  container.appendChild(createArticle(data));
+data.forEach((el)=>{
+  container.appendChild(createArticle(el));
 })
