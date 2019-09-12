@@ -106,24 +106,30 @@ const data = [
    const p1 = document.createElement('p');
    const p2 = document.createElement('p');
    const p3 = document.createElement('p');
-   const bttn = document.createElement('span');
+   const bttnOpen = document.createElement('button');
+   const bttnClose = document.createElement('button');
 
    article.appendChild(title);
    article.appendChild(date);
    article.appendChild(p1);
    article.appendChild(p2);
    article.appendChild(p3);
-   article.appendChild(bttn);
+   article.appendChild(bttnOpen);
+   article.appendChild(bttnClose);
 
    article.classList.add('articles');
    date.classList.add('date');
-   bttn.classList.add('expandButton')
+   bttnOpen.classList.add('expandButton')
+   bttnClose.classList.add('expandButton')
 
    title.textContent = ar.title;
    date.textContent = ar.date;
    p1.textContent = ar.firstParagraph;
    p2.textContent = ar.secondParagraph;
    p3.textContent = ar.thirdParagraph;
+   bttnOpen.textContent = ('Open')
+   bttnClose.textContent = ('Close')
+   bttnClose.style.display = ('none')
 
    return article;
 
@@ -135,7 +141,9 @@ const data = [
   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
 
   Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
-
+*/
+ const bttnOpen = document.querySelector('.span')
+/*
   Step 3: return the entire component.
 
   Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
