@@ -98,7 +98,29 @@ const data = [
 
     <span class='expandButton'></span>
   </div>
+*/
+ function createArticle(new){
+   const article = createElement('div');
+   const title = createElement('h2');
+   const date = createElement('p')
+   const p1 = createElement('p')
+   const p2 = createElement('p')
+   const p3 = createElement('p')
+   const bttn = createElement('span')
 
+   article.classLists.add('article');
+   date.classLists.add('date');
+   bttn.classLists.add('expandButton')
+
+   article.appendChild('title');
+   article.appendChild('date');
+   article.appendChild('p1');
+   article.appendChild('p2');
+   article.appendChild('p3');
+   article.appendChild('bttn')
+ }
+
+/*
   Hint: You will need to use createElement more than once here!
 
   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
