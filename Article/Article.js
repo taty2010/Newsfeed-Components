@@ -99,14 +99,14 @@ const data = [
     <span class='expandButton'></span>
   </div>
 */
- function createArticle(new){
-   const article = createElement('div');
-   const title = createElement('h2');
-   const date = createElement('p');
-   const p1 = createElement('p');
-   const p2 = createElement('p');
-   const p3 = createElement('p');
-   const bttn = createElement('span');
+ function createArticle(ar){
+   const article = document.createElement('div');
+   const title = document.createElement('h2');
+   const date = document.createElement('p');
+   const p1 = document.createElement('p');
+   const p2 = document.createElement('p');
+   const p3 = document.createElement('p');
+   const bttn = document.createElement('span');
 
    article.appendChild('title');
    article.appendChild('date');
@@ -115,15 +115,17 @@ const data = [
    article.appendChild('p3');
    article.appendChild('bttn');
 
-   article.classLists.add('article');
+   article.classLists.add('articles');
    date.classLists.add('date');
    bttn.classLists.add('expandButton')
 
-   title.textContent = data.title;
-   date.textContent = data.date;
-   p1.textContent = data.firstParagraph;
-   p2.textContent = data.secondParagraph;
-   p3.textContent = data.thirdParagraph;
+   title.textContent = ar.title;
+   date.textContent = ar.date;
+   p1.textContent = ar.firstParagraph;
+   p2.textContent = ar.secondParagraph;
+   p3.textContent = ar.thirdParagraph;
+
+   return createArticle;
 
  }
 
@@ -141,3 +143,9 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+
+const container = document.querySelector('.articles');
+
+data.forEach((data)=>{
+  container.appendChild(createArticle(data));
+})
