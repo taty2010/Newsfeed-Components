@@ -108,12 +108,12 @@ const data = [
    const p3 = document.createElement('p');
    const bttn = document.createElement('span');
 
-   article.appendChild('title');
-   article.appendChild('date');
-   article.appendChild('p1');
-   article.appendChild('p2');
-   article.appendChild('p3');
-   article.appendChild('bttn');
+   article.appendChild(title);
+   article.appendChild(date);
+   article.appendChild(p1);
+   article.appendChild(p2);
+   article.appendChild(p3);
+   article.appendChild(bttn);
 
    article.classLists.add('articles');
    date.classLists.add('date');
