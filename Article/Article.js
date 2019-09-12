@@ -106,7 +106,8 @@ const data = [
    const p1 = document.createElement('p');
    const p2 = document.createElement('p');
    const p3 = document.createElement('p');
-   const bttnOpen = document.createElement('button');
+   const span = document.createElement('span');
+   const bttnOpen = document.createElement('span');
    const bttnClose = document.createElement('button');
 
    article.appendChild(title);
@@ -114,20 +115,22 @@ const data = [
    article.appendChild(p1);
    article.appendChild(p2);
    article.appendChild(p3);
-   article.appendChild(bttnOpen);
-   article.appendChild(bttnClose);
+   article.appendChild(span);
+   span.appendChild(bttnOpen);
+   span.appendChild(bttnClose);
 
-   article.classList.add('articles');
+   article.classList.add('article');
    date.classList.add('date');
-   bttnOpen.classList.add('expandButton')
-   bttnClose.classList.add('expandButton')
+   //bttnOpen.classList.add('article-open');
+   bttnClose.classList.add('close');
+   span.classList.add('expandButton');
 
    title.textContent = ar.title;
    date.textContent = ar.date;
    p1.textContent = ar.firstParagraph;
    p2.textContent = ar.secondParagraph;
    p3.textContent = ar.thirdParagraph;
-   bttnOpen.textContent = ('Open')
+   //bttnOpen.textContent = ('Open')
    bttnClose.textContent = ('Close')
    bttnClose.style.display = ('none')
 
@@ -142,7 +145,7 @@ const data = [
 
   Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
 */
- const bttnOpen = document.querySelector('.span')
+ const bttnOpen = document.querySelector('bttnOpen')
 /*
   Step 3: return the entire component.
 
