@@ -119,7 +119,11 @@ const data = [
    date.classLists.add('date');
    bttn.classLists.add('expandButton')
 
-   title.
+   title.textContent = data.title;
+   date.textContent = data.date;
+   p1.textContent = data.firstParagraph;
+   p2.textContent = data.secondParagraph;
+   p3.textContent = data.thirdParagraph;
 
  }
 
