@@ -102,22 +102,25 @@ const data = [
  function createArticle(new){
    const article = createElement('div');
    const title = createElement('h2');
-   const date = createElement('p')
-   const p1 = createElement('p')
-   const p2 = createElement('p')
-   const p3 = createElement('p')
-   const bttn = createElement('span')
-
-   article.classLists.add('article');
-   date.classLists.add('date');
-   bttn.classLists.add('expandButton')
+   const date = createElement('p');
+   const p1 = createElement('p');
+   const p2 = createElement('p');
+   const p3 = createElement('p');
+   const bttn = createElement('span');
 
    article.appendChild('title');
    article.appendChild('date');
    article.appendChild('p1');
    article.appendChild('p2');
    article.appendChild('p3');
-   article.appendChild('bttn')
+   article.appendChild('bttn');
+
+   article.classLists.add('article');
+   date.classLists.add('date');
+   bttn.classLists.add('expandButton')
+
+   title.
+
  }
 
 /*
