@@ -108,7 +108,7 @@ const data = [
    const p3 = document.createElement('p');
    const span = document.createElement('span');
    const bttnOpen = document.createElement('span');
-   const bttnClose = document.createElement('button');
+   const bttnClose = document.createElement('span');
 
    article.appendChild(title);
    article.appendChild(date);
@@ -130,9 +130,17 @@ const data = [
    p1.textContent = ar.firstParagraph;
    p2.textContent = ar.secondParagraph;
    p3.textContent = ar.thirdParagraph;
-   //bttnOpen.textContent = ('Open')
-   bttnClose.textContent = ('Close')
-   bttnClose.style.display = ('none')
+   bttnOpen.textContent = ('\u2BC6')
+   bttnClose.textContent = ('\u2BC5')
+  // bttnClose.style.display = ('none')
+
+   //Click Event
+  span.addEventListener("click", ()=>{
+      bttnOpen.classList.toggle('close');
+      bttnClose.classList.toggle('close');
+      article.classList.toggle('article-open');
+  })
+
 
    return article;
 
@@ -145,7 +153,7 @@ const data = [
 
   Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
 */
- const bttnOpen = document.querySelector('bttnOpen')
+
 /*
   Step 3: return the entire component.
 
